@@ -15,6 +15,7 @@ if [ -d "${PROFILEDIR}" ] ; then
 	   --env="MESA_GL_VERSION_OVERRIDE" \
 	   --mount "type=bind,src=${HOME}/.Xauthority,dst=/home/qgis/.Xauthority,readonly" \
 	   --mount "type=bind,src=${PROFILEDIR},dst=/home/qgis" \
+	   --mount "type=bind,src=${HOME}/mnt,dst=/mnt" \
 	   andzuc/debian-qgis:latest \
 	   "$@"
 else
